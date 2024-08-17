@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar with Background Image</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js" defer></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bg-image"></div>
+        <div class="search-text">Stock Search</div>
+        <div class="search-container">
+            <form id="searchForm">
+                <div class="form-row">
+                    <button type="submit"><img class="submit-btn" src="static/img/search-solid.svg" alt=""></button>
+                    <input type="text" id="tickerSym" placeholder="Enter Stock Ticker Symbol" name="search" required>
+                    <button type="reset"><img class="reset-btn" src="static/img/times-solid.svg" alt=""></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <ul id="nav">
+        <li><button onclick="enableCompanyProfile()" id="company-btn" class="link">Company</button></li>
+        <li><button onclick="enableStockSummary()" id="stock-btn" class="link">Stock Summary</button></li>
+        <li><button onclick="" id="charts" class="link">Charts</button></li>
+        <li><button onclick="" id="news" class="link">Latest News</button></li>
+    </ul>
+    <div id="company-card">
+        <div class="logo-container">
+            <img src="" alt="Company Logo" class="company-logo" id="logo">
+        </div>
+        <div class="info-container">
+            <div class="info-row">
+                <span class="label">Company Name</span>
+                <span class="value" id="name"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Stock Ticker Symbol</span>
+                <span class="value" id="ticker1"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Stock Exchange Code</span>
+                <span class="value" id="exchange"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Company Start Date</span>
+                <span class="value" id="ipo"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Category</span>
+                <span class="value" id="finnhubIndustry"></span>
+            </div>
+        </div>
+    </div>
+    
+    <div id="stock-summary">
+        <div class="info-container">
+            <div class="info-row">
+                <span class="label">Stock Ticker Symbol</span>
+                <span class="value" id="ticker2"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Trading Day</span>
+                <span class="value" id="t"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Previous Closing Price</span>
+                <span class="value" id="pc"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Opening Price</span>
+                <span class="value" id="o"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">High Price</span>
+                <span class="value" id="h"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Low Price</span>
+                <span class="value" id="l"></span>
+            </div>
+            <div class="info-row">
+                <span class="label">Change</span>
+                <span class="value" id="d">
+                    <img id="d_image"src="static/img/GreenArrowUp.png" alt="d_image.png">
+                </span>
+            </div>
+            <div class="info-row">
+                <span class="label">Change Percent</span>
+                <span class="value" id="dp">
+                    <img id="dp_image"src="static/img/GreenArrowUp.png" alt="dp_image.png">
+                </span>
+            </div>
+        </div>
+        <div id="recommendation">
+            <span class="strongSellText">Strong<br>Sell</span>
+            <div id="strongSell"></div>
+            <div id="sell"></div>
+            <div id="hold"></div>
+            <div id="buy"></div>
+            <div id="strongBuy"></div>
+            <span class="strongBuyText">Strong<br>Buy</span>
+        </div>
+        <div>Recommendation Trends</div>
+    </div>
+
+    <div id="news-container">
+    </div>
+
+    <div id="charts-container">
+    </div>
+    <div class="error-container" id="error-container">
+        <p class="error-text" id="error-text"></p>
+    </div>
+</body>
+
+</html>

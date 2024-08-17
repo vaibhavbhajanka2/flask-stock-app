@@ -1,0 +1,316 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+#nav {
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 50px;
+    background-color: #FAFAFC;
+    display: none;
+    text-align: center;
+    color: #000;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+button.link {
+    border: none;
+    padding: 15px;
+    background-color: #FAFAFC;
+    font-size: medium;
+    color: #736E6E;
+    font-weight: 200;
+}
+
+button.link:hover {
+    cursor: pointer;
+    background-color: #E1E1E1;
+
+}
+
+button.link:focus {
+    background-color: #d2d2d2;
+    outline: none;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.form-row {
+    display: flex;
+
+}
+
+.bg-image {
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('img/back.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.search-text {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: 320;
+    line-height: 1.5;
+}
+
+.search-container {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+}
+
+.search-container input[type=text] {
+    min-width: 520px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: grey;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 15px;
+}
+
+.reset-btn {
+    width: 10px;
+}
+
+.error-container {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.error-text {
+    margin: auto;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#company-card {
+    position: absolute;
+    width: 550px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: none;
+    top: 520px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.company-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 0;
+    border-top: 1px solid #eee;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.label {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 16px;
+    flex: 1;
+}
+
+.value {
+    color: #666;
+    text-align: left;
+    flex: 1;
+}
+
+#stock-summary {
+    position: absolute;
+    width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: none;
+    top: 570px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.info-row .value img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: auto;
+    margin-left: 5px;
+}
+
+#recommendation {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#strongSell,
+#sell,
+#hold,
+#buy,
+#strongBuy {
+    color: white;
+    padding: 10px;
+}
+
+#strongSell {
+    background-color: #ed2937;
+}
+
+#sell {
+    background-color: #b25f4a;
+}
+
+#hold {
+    background-color: #77945c;
+}
+
+#buy {
+    background-color: #3eca6c;
+}
+
+#strongBuy {
+    background-color: #01ff7f;
+}
+
+.strongSellText {
+    color: #ed2937;
+    padding-right: 10px;
+}
+
+.strongBuyText {
+    color: #01ff7f;
+    padding-left: 10px;
+}
+
+#d_image,
+#dp_image {
+    width: 20px;
+    height: 20px;
+}
+
+#news-container {
+    position: absolute;
+    width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: none;
+    top: 700px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.news-article {
+    background-color: #FAFAFC;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.news-article img {
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+}
+
+.news-article div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.news-article h3{
+    margin: 0;
+}
+
+.news-article p{
+    margin: 0;
+    color: grey;
+}
+
+.news-article a:visited{
+    color: blueviolet;
+}
+
+.news-article a:active{
+    color: none;
+}
+
+#charts-container {
+    position: absolute;
+    width: 900px;
+    height: 650px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: none;
+    top: 680px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
